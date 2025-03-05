@@ -5,11 +5,12 @@ import { useEffect } from 'react'
 
 export function ImageDetails() {
 	const { imageId } = useParams()
-	const { isLoading, fetchedImages } = useImageFetching(imageId, 500)
+	const { isLoading, fetchedImages } = useImageFetching(imageId/*, 500*/)
 	if (isLoading) {
 		return <div>Loading...</div>
 	}
-	const imageData = fetchedImages[0]
+	const images = fetchedImages
+	const imageData = images.find((image) => image._id === imageId)
 	if (!imageData) {
 		return (
 			<div>
