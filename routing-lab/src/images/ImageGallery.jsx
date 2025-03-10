@@ -1,5 +1,4 @@
 import { MainLayout } from "../MainLayout.jsx";
-import { useImageFetching } from "./useImageFetching.js";
 import "./ImageGallery.css";
 import {Link} from 'react-router'
 
