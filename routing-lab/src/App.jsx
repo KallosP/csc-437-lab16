@@ -45,7 +45,7 @@ function App() {
 						path="/images"
 						element={
 							<ProtectedRoute authToken={authToken}>
-								<ImageGallery isLoading={isLoading} fetchedImages={fetchedImages} />
+								<ImageGallery authToken={authToken} isLoading={isLoading} fetchedImages={fetchedImages} />
 							</ProtectedRoute>
 						}
 					/>

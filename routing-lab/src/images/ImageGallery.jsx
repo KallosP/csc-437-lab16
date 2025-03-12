@@ -1,6 +1,7 @@
 import { MainLayout } from "../MainLayout.jsx";
 import "./ImageGallery.css";
 import {Link} from 'react-router'
+import { ImageUploadForm } from "./ImageUploadForm.jsx";
 
 export function ImageGallery(props) {
     //const { isLoading, fetchedImages } = useImageFetching("");
@@ -19,6 +20,8 @@ export function ImageGallery(props) {
             <div className="ImageGallery">
                 {imageElements}
             </div>
+            <h3>Upload image</h3>
+            <ImageUploadForm authToken={props.authToken}/>
         </div>
     );
 }
